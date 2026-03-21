@@ -8,18 +8,18 @@ const Projects = () => {
       title: "E-commerce Website",
       category: "Full Stack",
       description: "Developed a responsive E-commerce website enabling users to buy products.",
-      techStack: ["React", "Node.js", "Express"],
+      techStack: ["React", "Node.js", "Express", "MongoDB"],
       image: "/projects/ecommerce_website.png",
       github: "https://github.com/BANSHI1501/E-commerce-MERN",
       demo: "https://e-commerce-mern-git-main-banshi-s-projects.vercel.app/"
     },
     {
-      title: "Short URL Generator",
+      title: "Advance Short URL Generator",
       category: "Backend",
       description: "Built a Short URL Generator web app featuring user authentication and individual profiles.",
-      techStack: ["MongoDB", "Express", "Node.js"],
-      image: "",
-      github: "https://github.com/BANSHI1501",
+      techStack: ["MongoDB", "Express", "Node.js", "React"],
+      image: "/projects/short_url_generator.png",
+      github: "https://github.com/BANSHI1501/LinkShield-URL-Shortener-",
       demo: "#"
     },
     {
