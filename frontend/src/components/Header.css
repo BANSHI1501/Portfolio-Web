@@ -1,0 +1,195 @@
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+  padding: 0.5rem 0; /* reduce header height */
+  background: rgba(15, 23, 42, 0.6); /* Very subtle dark transparent base */
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border-bottom: 0.1px solid rgba(255, 255, 255, 0.02); /* Ultra-thin faint separator */
+  transition: background-color 0.3s ease, border-color 0.3s ease;
+}
+
+[data-theme='light'] .header {
+  background: rgba(248, 250, 252, 0.7); /* Subtle light transparent base matching body bg */
+  border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.header-content {
+  display: flex;
+  align-items: center;
+  gap: 1rem; /* Reduced gap between nav links and actions */
+}
+
+.nav-links {
+  display: flex;
+  gap: clamp(0.5rem, 1.5vw, 1rem); /* Fluid gap between links */
+  margin-left: auto;
+}
+
+.logo-text {
+  font-size: 1.5rem;
+  font-weight: 800;
+  color: var(--text-primary);
+  letter-spacing: -0.5px;
+}
+
+
+
+.nav-links a {
+  font-weight: 500;
+  position: relative;
+  padding: 0.5rem 0;
+  color: var(--text-primary);
+  font-size: 1.1rem;
+  transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+  color: var(--primary-color);
+}
+
+.header-actions {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.theme-toggle {
+  background: none;
+  border: none;
+  font-size: 1.25rem;
+  color: var(--text-primary);
+  cursor: pointer;
+  padding: 0.5rem;
+  border-radius: 50%;
+  transition: transform 0.3s ease, background-color 0.3s ease, color 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.theme-toggle:hover {
+  transform: rotate(15deg) scale(1.1);
+  background-color: rgba(0, 223, 154, 0.1);
+  color: var(--primary-color);
+}
+
+.desktop-cv-btn {
+  display: inline-flex;
+  padding: 0.4rem 0.8rem !important; /* Forces smaller size */
+  font-size: 0.85rem !important;
+}
+
+.mobile-menu-btn {
+  display: none;
+  background: none;
+  border: none;
+  font-size: 1.8rem;
+  color: var(--text-primary);
+  cursor: pointer;
+  padding: 0.5rem;
+  transition: color 0.3s ease;
+  align-items: center;
+  justify-content: center;
+}
+
+.mobile-menu-btn:hover {
+  color: var(--primary-color);
+}
+
+.mobile-nav {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  background: rgba(15, 23, 42, 0.95);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+  display: flex;
+  flex-direction: column;
+  padding: 0;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.4s ease-in-out, padding 0.4s ease-in-out;
+}
+
+[data-theme='light'] .mobile-nav {
+  background: rgba(248, 250, 252, 0.95);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+}
+
+.mobile-nav.open {
+  max-height: 500px;
+}
+
+.mobile-nav-links {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.mobile-nav-links a {
+  padding: 0.6rem 2rem;
+  font-size: 0.95rem;
+  font-weight: 500;
+  color: var(--text-primary);
+  transition: background-color 0.3s ease, color 0.3s ease;
+  text-align: left;
+}
+
+.mobile-nav-links a:hover {
+  color: var(--primary-color);
+  background-color: rgba(0, 223, 154, 0.05);
+}
+
+.mobile-cv-wrapper {
+  padding: 0;
+  width: 100%;
+  margin-top: auto;
+}
+
+.mobile-cv-btn {
+  display: block;
+  width: 100%;
+  padding: 0.75rem 1rem !important; /* Slightly smaller mobile CV button */
+  text-align: center !important;
+  background-color: var(--primary-color);
+  color: var(--bg-primary) !important;
+  font-weight: 600 !important;
+  border: none !important;
+  border-radius: 0;
+  font-size: 0.9rem !important;
+}
+
+.mobile-cv-btn:hover {
+  background-color: var(--primary-hover);
+  color: var(--bg-primary) !important;
+}
+
+@media (max-width: 768px) {
+  .nav-links {
+    display: none;
+  }
+  
+  .desktop-cv-btn {
+    display: none;
+  }
+  
+  .mobile-menu-btn {
+    display: flex;
+  }
+  
+  .header-actions {
+    margin-left: auto; /* Push buttons to the right on mobile */
+  }
+  
+  .header {
+    background: var(--bg-primary);
+  }
+}

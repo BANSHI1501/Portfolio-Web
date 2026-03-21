@@ -1,0 +1,114 @@
+.footer {
+  padding: 2rem 2rem 1rem;
+  margin-bottom: 1rem;
+}
+
+.contact-wrapper {
+  display: flex;
+  justify-content: space-between;
+  gap: 4rem;
+  padding: 3rem;
+  border-radius: var(--radius-xl);
+}
+
+.contact-info {
+  flex: 1;
+}
+
+.contact-info h2 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  color: var(--primary-color);
+}
+
+.contact-info p {
+  color: var(--text-secondary);
+  font-size: 1.1rem;
+  margin-bottom: 2rem;
+  line-height: 1.7;
+}
+
+.info-details {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.info-item {
+  font-size: 1.1rem;
+}
+
+.info-item strong {
+  display: block;
+  font-size: 0.9rem;
+  color: var(--primary-color);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: 0.25rem;
+}
+
+.contact-form {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.form-group input,
+.form-group textarea {
+  width: 100%;
+  padding: 1rem;
+  background: rgba(2, 6, 17, 0.6);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: var(--radius-md);
+  color: var(--text-primary);
+  font-size: 1rem;
+  transition: all 0.3s ease;
+  outline: none;
+}
+
+[data-theme='light'] .form-group input,
+[data-theme='light'] .form-group textarea {
+  background: #ffffff;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+  border-color: var(--primary-color);
+  box-shadow: 0 0 0 2px rgba(0, 223, 154, 0.2); /* Use emerald glow instead of indigo */
+}
+
+[data-theme='light'] .form-group input:focus,
+[data-theme='light'] .form-group textarea:focus {
+  box-shadow: 0 0 0 2px rgba(4, 120, 87, 0.2); /* Deeper emerald glow for light mode */
+}
+
+.btn-block {
+  width: 100%;
+  padding: 1rem;
+  font-size: 1.1rem;
+}
+
+.status-message {
+  text-align: center;
+  margin-top: 1rem;
+  color: #a855f7;
+  font-weight: 500;
+}
+
+.footer-bottom {
+  text-align: center;
+  margin-top: 2rem;
+  padding-top: 1rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  color: var(--text-secondary);
+}
+
+@media (max-width: 768px) {
+  .contact-wrapper {
+    flex-direction: column;
+    padding: 2rem;
+    gap: 2rem;
+  }
+}

@@ -1,0 +1,205 @@
+:root {
+  --primary-color: #00df9a;
+  /* Vibrant Emerald/Teal */
+  --primary-hover: #059669;
+  --bg-color-dark: #020617;
+  /* Deep Slate Dark */
+  --bg-card: rgba(15, 23, 42, 0.8);
+  /* Darker glassmorphism card bg */
+  --text-primary: #f8fafc;
+  --text-secondary: #94a3b8;
+  --accent-gradient: linear-gradient(135deg, #00df9a 0%, #10b981 100%);
+  --radius-xl: 1.5rem;
+  --radius-lg: 1rem;
+  --radius-md: 0.5rem;
+  --shadow-glow: 0 0 20px rgba(0, 223, 154, 0.4);
+}
+
+[data-theme='light'] {
+  --bg-color-dark: #f8fafc;
+  --bg-card: rgba(255, 255, 255, 0.9);
+  --text-primary: #0f172a;/* Slate 900 */
+  --text-secondary: #334155;
+  --primary-color: #059669; /* Slightly deeper emerald (Emerald 600) for better contrast */
+  --shadow-glow: 0 4px 20px rgba(5, 150, 105, 0.1);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: var(--bg-color-dark);
+  color: var(--text-primary);
+  line-height: 1.6;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  overflow-x: hidden;
+  position: relative;
+}
+
+/* Background blob effects */
+body::before,
+body::after {
+  content: '';
+  position: fixed;
+  width: 500px;
+  height: 500px;
+  border-radius: 50%;
+  filter: blur(100px);
+  z-index: -1;
+  opacity: 0.4;
+  animation: float 20s infinite alternate;
+}
+
+body::before {
+  top: -100px;
+  left: -100px;
+  background: var(--primary-color);
+}
+
+body::after {
+  bottom: -100px;
+  right: -100px;
+  background: #10b981;
+  animation-delay: -10s;
+}
+
+[data-theme='light'] body::before,
+[data-theme='light'] body::after {
+  opacity: 0.15; /* Much lower opacity in light mode to avoid blocking text */
+}
+
+@keyframes float {
+  0% {
+    transform: translate(0, 0);
+  }
+
+  100% {
+    transform: translate(50px, 50px);
+  }
+}
+
+.container {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 2rem;
+  width: 100%;
+}
+
+h1,
+h2,
+h3 {
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+  transition: all 0.3s ease;
+}
+
+button,
+.btn {
+  cursor: pointer;
+  border: none;
+  outline: none;
+  font-weight: 600;
+  padding: 0.75rem 1.5rem;
+  border-radius: var(--radius-md);
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.btn-primary {
+  background: var(--primary-color);
+  color: #0f172a;
+  box-shadow: 0 4px 15px rgba(0, 223, 154, 0.3);
+}
+
+.btn-primary:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-glow);
+}
+
+.btn-secondary {
+  background: transparent;
+  color: var(--primary-color);
+  border: 1px solid var(--primary-color);
+}
+
+.btn-secondary:hover {
+  background: rgba(0, 223, 154, 0.1);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 15px rgba(0, 223, 154, 0.1);
+}
+
+/* Glassmorphism utilities */
+.glass {
+  background: var(--bg-card);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.3);
+}
+
+.highlight {
+  background: linear-gradient(135deg, #00df9a 0%, #10b981 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  display: inline-block;
+}
+
+[data-theme='light'] .glass {
+  border: 1px solid rgba(0, 0, 0, 0.05);
+  /* Subtle dark border instead of white */
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.04);
+  /* Slight dark shadow */
+}
+
+/* Animations */
+.fade-in {
+  animation: fadeIn 0.8s ease forwards;
+  opacity: 0;
+}
+
+.slide-up {
+  animation: slideUp 0.8s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+  opacity: 0;
+  transform: translateY(30px);
+}
+
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes slideUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Layout */
+main {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding-top: 60px; /* Reduced space below fixed header */
+}
+
+@media (max-width: 768px) {
+  .container {
+    padding: 0 1rem; /* Reduce padding on small screens to give content more room */
+  }
+}
