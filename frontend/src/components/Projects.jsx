@@ -20,7 +20,7 @@ const Projects = () => {
       techStack: ["MongoDB", "Express", "Node.js", "React"],
       image: "/projects/short_url_generator.png",
       github: "https://github.com/BANSHI1501/LinkShield-URL-Shortener-",
-      demo: "#"
+      demo: "https://link-shield-url-shortener.vercel.app/"
     },
     {
       title: "E-Commerce Platform",
