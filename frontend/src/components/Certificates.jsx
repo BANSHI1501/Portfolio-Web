@@ -17,10 +17,28 @@ const Certificates = () => {
       credentialUrl: "https://docs.google.com/document/d/12emOr2etb_V6dLkrm5j78DzpWmppoBjmKIZepgX3760/edit?usp=sharing"
     },
     {
-      title: "Gen Ai Nasscom",
-      issuer: "Bskilling India Gov.",
+      title: "Gen AI & Prompt Engineering",
+      issuer: "Nasscom x Bskilling",
       date: "2026",
       credentialUrl: "https://docs.google.com/document/d/1aYXgDOYfEuSsLIRSXbqrXnrG4-xnn9KO0iFNG6PGNIE/edit?usp=sharing"
+    },
+    {
+      title: "Python for Data Science",
+      issuer: "Great Learning",
+      date: "2024",
+      credentialUrl: "#"
+    },
+    {
+      title: "Cloud Computing Fundamentals",
+      issuer: "Coursera / IBM",
+      date: "2024",
+      credentialUrl: "#"
+    },
+    {
+      title: "Frontend Engineering",
+      issuer: "Hackerrank",
+      date: "2023",
+      credentialUrl: "#"
     }
   ];
 
@@ -29,11 +47,12 @@ const Certificates = () => {
       <div className="section-header fade-in">
         <h2><span className="highlight">Certifications</span></h2>
         <div className="underline"></div>
+        <p className="section-subtitle">A collection of my professional certifications and achievements.</p>
       </div>
 
       <div className="certificates-grid">
         {defaultCertificates.map((cert, index) => (
-          <div key={index} className="cert-card glass slide-up" style={{ animationDelay: `${index * 0.1}s` }}>
+          <div key={index} className="cert-card glass fade-in" style={{ animationDelay: `${index * 0.1}s` }}>
             <div className="cert-icon-wrapper">
               <FaAward className="cert-icon" />
             </div>
