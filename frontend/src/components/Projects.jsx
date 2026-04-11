@@ -7,7 +7,7 @@ const Projects = () => {
     {
       title: "E-commerce Website",
       category: "Full Stack",
-      description: "Developed a responsive E-commerce website enabling users to buy products.",
+      description: "Built a MERN-based e-commerce platform with user authentication, product management, cart and order system, secure checkout, and a responsive UI for seamless shopping experience.",
       techStack: ["React", "Node.js", "Express", "MongoDB"],
       image: "/projects/ecommerce_website.png",
       github: "https://github.com/BANSHI1501/E-commerce-MERN",
@@ -16,7 +16,7 @@ const Projects = () => {
     {
       title: "Advance Short URL Generator",
       category: "Backend",
-      description: "Built a Short URL Generator web app featuring user authentication and individual profiles.",
+      description: "Built a MERN-based URL shortener with authentication, secure links, QR code generation, click tracking, and a real-time analytics dashboard.",
       techStack: ["MongoDB", "Express", "Node.js", "React"],
       image: "/projects/short_url_generator.png",
       github: "https://github.com/BANSHI1501/LinkShield-URL-Shortener-",

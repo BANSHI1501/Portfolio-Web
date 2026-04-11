@@ -40,6 +40,15 @@ const contactSchema = new mongoose.Schema({
 const Contact = mongoose.model('Contact', contactSchema);
 
 // API Routes
+app.get('/analytics', async (req, res) => {
+  try {
+    res.json({ status: 'ok', message: 'Analytics endpoint' });
+  } catch (error) {
+    console.error('Analytics error:', error);
+    res.status(500).json({ error: 'Failed to fetch analytics' });
+  }
+});
+
 app.post('/api/contact', async (req, res) => {
   try {
     const { name, email, message } = req.body;

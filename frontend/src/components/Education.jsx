@@ -6,24 +6,27 @@ import { FaGraduationCap, FaCalendarAlt } from 'react-icons/fa';
 const Education = () => {
   const educationData = [
     {
-      degree: "Bachelor of Technology in Computer Science",
+      degree: "B.Tech in Computer Science and Engineering",
       institution: "Lovely Professional University",
       period: "2023 - 2027",
       location: "Phagwara, Punjab",
+      marks: "Overall CGPA (till 5th semester) 7.27",
       description: "Focus on algorithms, full-stack development, and data structures. Maintaining excellent academic standing."
     },
     {
-      degree: "Higher Secondary (12th)",
-      institution: "State Board",
+      degree: "Class 12th",
+      institution: "+2 H/S High School",
       period: "2020 - 2022",
-      location: "Bihar, India",
+      location: "Buxar, Bihar",
+      marks: "Specialised in Physics, Chemistry, and Maths. Overall percentage 77.4%",
       description: "Completed with distinction, majoring in Physics, Chemistry, and Mathematics."
     },
     {
-      degree: "Secondary School (10th)",
-      institution: "DAV Public School, Dumraon",
+      degree: "Class 10th",
+      institution: "DAV Public School",
       period: "2019 - 2020",
-      location: "Dumraon, Bihar",
+      location: "Buxar, Bihar",
+      marks: "Overall percentage 74.0%",
       description: "Completed secondary education with strong academic performance."
     }
   ];
@@ -39,16 +42,17 @@ const Education = () => {
         {educationData.map((item, index) => (
           <div key={index} className="timeline-item slide-up" style={{ animationDelay: `${index * 0.2}s` }}>
             <div className="timeline-dot"></div>
-             <div className="timeline-content glass">
+            <div className="timeline-content glass">
               <div className="period-wrapper">
                 <FaCalendarAlt className="icon" />
                 <span className="period">{item.period}</span>
               </div>
-              <h3>{item.degree}</h3>
-              <h4 className="institution">
+              <h3 className="institution">
                 <FaGraduationCap className="icon" />
                 <span>{item.institution}</span>
-              </h4>
+              </h3>
+              <h4 className="degree">{item.degree}</h4>
+              {item.marks && <p className="marks">{item.marks}</p>}
               <div className="location">
                 <HiOutlineLocationMarker className="icon" />
                 <span>{item.location}</span>
