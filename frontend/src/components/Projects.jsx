@@ -23,13 +23,13 @@ const Projects = () => {
       demo: "https://link-shield-url-shortener.vercel.app/"
     },
     {
-      title: "E-Commerce Platform",
-      category: "MERN Stack",
-      description: "A feature-rich e-commerce store with payment gateway integration and dynamic cart management.",
-      techStack: ["MongoDB", "Express", "React", "Node"],
-      image: "",
-      github: "https://github.com/BANSHI1501",
-      demo: "#"
+      title: "Portfolio Website",
+      category: "Frontend",
+      description: "A professional portfolio website built with React and Vanilla CSS, featuring smooth animations and a responsive design.",
+      techStack: ["React", "CSS", "Vite"],
+      image: "/projects/portfolio.png",
+      github: "https://github.com/BANSHI1501/Portfolio-Web",
+      demo: "http://localhost:5173/"
     }
   ];
 
