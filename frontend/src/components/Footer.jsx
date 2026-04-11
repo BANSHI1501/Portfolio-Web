@@ -40,7 +40,7 @@ const Footer = () => {
           <p>Ready to collaborate or have an exciting project in mind? Reach out to me.</p>
           <div className="info-details">
             <div className="info-item">
-              <strong>Name:</strong> Banshi Prasad
+              <strong>Name:</strong> Banshi
             </div>
             <div className="info-item">
               <strong>Email:</strong> prasadbanshi2002@gmail.com
@@ -87,7 +87,7 @@ const Footer = () => {
         </form>
       </div>
       <div className="footer-bottom">
-        <p>&copy; {new Date().getFullYear()} Banshi Prasad. All rights reserved.</p>
+        <p>&copy; {new Date().getFullYear()} Banshi. All rights reserved.</p>
       </div>
     </footer>
   );

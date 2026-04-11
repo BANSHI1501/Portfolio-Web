@@ -11,7 +11,7 @@ const Hero = () => {
       <div className="hero-content">
         <div className="hero-text slide-up">
           <div className="hero-badge">Full-Stack Developer</div>
-          <h1 className="name">Hi, I'm <span className="highlight">Banshi</span> Prasad</h1>
+          <h1 className="name">Hi, I'm <span className="highlight">Banshi</span></h1>
           <h3 className="headline">Building digital experiences that make a difference</h3>
           <p className="bio">
             Computer Science student with a passion for creating elegant solutions to complex problems. Specializing in full-stack development with expertise in Java and the MERN stack.
@@ -43,7 +43,7 @@ const Hero = () => {
         </div>
         <div className="hero-image-wrapper fade-in">
           <div className="image-border">
-            <img src={profileImg} alt="Banshi Prasad" className="profile-img" />
+            <img src={profileImg} alt="Banshi" className="profile-img" />
           </div>
         </div>
       </div>

@@ -26,7 +26,7 @@ const Header = () => {
     <header className="header fade-in">
       <div className="container header-content">
         <div className="logo">
-          <span className="logo-text"><span className="highlight" style={{color: 'var(--primary-color)'}}>B</span>anshi Prasad</span>
+          <span className="logo-text"><span className="highlight" style={{color: 'var(--primary-color)'}}>B</span>anshi</span>
         </div>
         <nav className="nav-links">
           <a href="#home">Home</a>

@@ -28,7 +28,7 @@ const About = () => {
           <ul className="contact-list">
             <li>
               <span className="icon"><FaUser /></span>
-              <span>Banshi Prasad</span>
+              <span>Banshi</span>
             </li>
             <li>
               <span className="icon"><HiOutlineLocationMarker /></span>

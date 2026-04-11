@@ -23,10 +23,10 @@ const Certificates = () => {
       credentialUrl: "https://docs.google.com/document/d/1aYXgDOYfEuSsLIRSXbqrXnrG4-xnn9KO0iFNG6PGNIE/edit?usp=sharing"
     },
     {
-      title: "Python for Data Science",
-      issuer: "Great Learning",
-      date: "2024",
-      credentialUrl: "#"
+      title: "Privacy and security in online social media",
+      issuer: "NPTEL",
+      date: "2025",
+      credentialUrl: "https://docs.google.com/document/d/1pUBzy8K7RbE1HfAQdYhppH0M2qdRQAlnuCQCeG8z2T4/edit?usp=sharing"
     },
     {
       title: "Cloud Computing Fundamentals",

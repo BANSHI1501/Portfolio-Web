@@ -29,7 +29,7 @@ const Projects = () => {
       techStack: ["React", "CSS", "Vite"],
       image: "/projects/portfolio.png",
       github: "https://github.com/BANSHI1501/Portfolio-Web",
-      demo: "http://localhost:5173/"
+      demo: "https://portfolio-web-git-main-banshi-s-projects.vercel.app/"
     }
   ];
 

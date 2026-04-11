@@ -1,0 +1,76 @@
+.loader-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background-color: #0f172a; /* Dark background */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+  overflow: hidden;
+}
+
+.loader-content {
+  text-align: center;
+}
+
+.loader-name {
+  font-size: 4rem;
+  font-weight: 800;
+  color: #fff;
+  letter-spacing: 0.5rem;
+  margin-bottom: 20px;
+  display: flex;
+  justify-content: center;
+}
+
+.char {
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeInUp 0.5s ease forwards;
+}
+
+.char:nth-child(1) { animation-delay: 0.1s; }
+.char:nth-child(2) { animation-delay: 0.2s; }
+.char:nth-child(3) { animation-delay: 0.3s; }
+.char:nth-child(4) { animation-delay: 0.4s; }
+.char:nth-child(5) { animation-delay: 0.5s; }
+.char:nth-child(6) { animation-delay: 0.6s; }
+
+.loader-line {
+  width: 0;
+  height: 4px;
+  background: linear-gradient(90deg, #3b82f6, #8b5cf6);
+  margin: 0 auto;
+  border-radius: 2px;
+  animation: growLine 1s ease 0.8s forwards;
+}
+
+@keyframes fadeInUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes growLine {
+  to {
+    width: 200px;
+  }
+}
+
+/* Fade out animation for the whole container */
+.loader-container.fade-out {
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.8s ease, visibility 0.8s ease;
+}
+
+@media (max-width: 768px) {
+  .loader-name {
+    font-size: 2.5rem;
+    letter-spacing: 0.3rem;
+  }
+}
