@@ -29,13 +29,13 @@ const Certificates = () => {
       credentialUrl: "https://docs.google.com/document/d/1pUBzy8K7RbE1HfAQdYhppH0M2qdRQAlnuCQCeG8z2T4/edit?usp=sharing"
     },
     {
-      title: "Frontend devloper (React)",
-      issuer: "Hackerrank",
+      title: "Frontend developer (React)",
+      issuer: "HackerRank",
       date: "2026",
       credentialUrl: "https://docs.google.com/document/d/1ctD0fB0Z-CcLSpxAoEYIG3fynlQjYMR30KgceyoM9Mg/edit?usp=sharing"
     },
     {
-      title: "Cloude Computing",
+      title: "Cloud Computing",
       issuer: "Coursera/IBM",
       date: "2026",
       credentialUrl: "https://docs.google.com/document/d/1Ps7nXPoSP0amhrpqnLpbuuEfMMfJOivRhELvG_19lHw/edit?usp=sharing"
