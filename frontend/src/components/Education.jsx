@@ -10,7 +10,7 @@ const Education = () => {
       institution: "Lovely Professional University",
       period: "2023 - 2027",
       location: "Phagwara, Punjab",
-      marks: "Overall CGPA (till 6th semester) 7.31",
+      marks: "Overall CGPA (till 6th semester) 7.37",
       description: "Focus on algorithms, full-stack development, and data structures. Maintaining excellent academic standing."
     },
     {
